@@ -243,11 +243,7 @@ with onglet_texte:
 
 with onglet_audio:
     st.markdown("<br>", unsafe_allow_html=True)
-    fichier_audio = st.file_uploader(
-        label="Importe ton enregistrement",
-        type=["mp3", "wav", "m4a", "ogg"],
-        label_visibility="collapsed"
-    )
+    fichier_audio = st.audio_input(label="Enregistre ton rêve")
     if fichier_audio is not None:
         st.audio(fichier_audio)
         with st.spinner("Transcription en cours..."):
