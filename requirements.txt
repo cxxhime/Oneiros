@@ -1,0 +1,11 @@
+# Framework d'application web
+streamlit==1.44.0
+
+# Client pour l'API Groq (LLM)
+groq==0.19.0
+
+# Requêtes HTTP
+requests==2.32.3
+
+# Gestion des variables d'environnement
+python-dotenv==1.0.0

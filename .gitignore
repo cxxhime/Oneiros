@@ -1,0 +1,12 @@
+# Environnement variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Environnement virtuel
+.dreams_env/
+
+# Données
+dreams_data/
