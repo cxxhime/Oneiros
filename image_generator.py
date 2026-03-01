@@ -8,7 +8,7 @@ STABILITY_API_KEY = os.getenv("STABILITY_API_KEY")
 
 def generate_image(dream_description):
     # Nettoie et raccourcit la description pour l'API
-    courte = dream_description.replace('\n', ' ').strip()[:200]
+    short = dream_description.replace('\n', ' ').strip()[:200]
     
     # Appel à l'API Stability AI pour générer l'image
     response = requests.post(
@@ -20,7 +20,7 @@ def generate_image(dream_description):
         },
         # Configure les paramètres de génération de l'image
         json={
-            "text_prompts": [{"text": f"dreamlike, surrealist, ethereal, magical, {courte}"}],
+            "text_prompts": [{"text": f"dreamlike, surrealist, ethereal, magical, {short}"}],
             "height": 1024,
             "width": 1024,
             "steps": 20

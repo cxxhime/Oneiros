@@ -8,7 +8,7 @@ JOURNAL_PATH = "dreams_data/journal.json"
 
 # Sauvegarde du rêve dans le journal au format JSON
 def save_dream(texte, resume, interpretation, image_url):
-    # Vérifie si le fichier journal.json existe, sinon crée-le avec une structure de base
+    # Charge le contenu actuel du journal depuis le fichier journal.json
     with open(JOURNAL_PATH, "r") as fichier_lecture:
         dreams_dict = json.load(fichier_lecture)
     # Ajoute le nouveau rêve à la liste des rêves dans le dictionnaire
