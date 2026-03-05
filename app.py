@@ -286,7 +286,7 @@ if lancer:
 
         # 2. Interprétation
         with st.spinner("Interprétation symbolique..."):
-            interpretation = interpret_dream(texte_reve)
+            interpretation = interpret_dream(resume)
         st.markdown(f"""
         <div class="dream-card">
             <div class="dream-card-title">🔮 Interprétation symbolique</div>
@@ -296,7 +296,7 @@ if lancer:
 
         # 3. Image
         with st.spinner("Génération de l'illustration..."):
-            image_url = generate_image("a beautiful dream with stars and forest")
+            image_url = generate_image(interpretation)
         st.markdown('<div class="dream-card-title" style="text-align:center; margin-top:1.5rem;">🎨 Illustration du rêve</div>', unsafe_allow_html=True)
         st.image(image_url, width=700)
 

@@ -26,7 +26,12 @@ def generate_image(dream_description):
             "steps": 20
         }
     )
-    
-    # Décode l'image base64 et retourne le contenu binaire
-    image_base64 = response.json()["artifacts"][0]["base64"]
+
+    if response.status_code != 200:
+        raise Exception(response.text)
+
+    data = response.json()
+
+    image_base64 = data["artifacts"][0]["base64"]
+
     return base64.b64decode(image_base64)

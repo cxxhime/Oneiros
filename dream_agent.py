@@ -29,7 +29,7 @@ def interpret_dream(dream_description):
     response = groq_client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[
-            {"role": "system", "content": "Tu es un interprète de rêves expert. Analyse la description du rêve et propose une interprétation détaillée, en tenant compte des symboles, des émotions et des éléments clés présents dans le rêve."},
+            {"role": "system", "content": "You turn French dream interpretations into a concise English prompt for Stable Diffusion XL. Output only the prompt, no explanations."},
             {"role": "user", "content": prompt}
         ],
         temperature= 1.0,
